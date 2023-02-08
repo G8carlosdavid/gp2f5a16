@@ -22,8 +22,4 @@ $preu_total = "El preu total de la reserva és de: " . $total_price . "€\n";
 
 echo $preu_total;
 
-$file = fopen("reserves.txt", "a");
-fwrite($file, $preu_total);
-fclose($file);
-
 ?>

@@ -1,0 +1,29 @@
+<?php
+
+$room_type = $_POST['room_type'];
+$room_price = 0;
+if ($room_type == "basic") {
+  $room_price = 40;
+} else {
+  $room_price = 50;
+}
+
+$num_rooms = $_POST['num_rooms'];
+$num_persons = $_POST['num_persons'];
+$num_doubles = $_POST['num_doubles'];
+$num_singles = $_POST['num_singles'];
+$num_nights = $_POST['num_nights'];
+
+$total_price = ($room_price * $num_nights * $num_rooms * $num_persons) +
+               ($num_doubles * 15) +
+               ($num_singles * 10);
+
+$preu_total = "El preu total de la reserva és de: " . $total_price . "€\n";
+
+echo $preu_total;
+
+$file = fopen("reserves.txt", "a");
+fwrite($file, $preu_total);
+fclose($file);
+
+?>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ca">
   <meta charset="utf-8">
-  <title>
-    APP GRUP 08
-  </title>
+  <title>APP GRUP 08</title>
   <body>
+    <p1><b>Reserva HOTEL grup08 (test):</b></p1>
+    <br><br>
     <form action="codi.php" method="post">
       <label for="room_type">Tipus d'habitació:</label>
       <select id="room_type" name="room_type">
@@ -33,6 +33,22 @@
       <label for="visa">Número de targeta VISA crèdit:</label>
       <input type="text" id="visa" name="visa"><br><br>
 
+      <label for="lunch">Afegir dinar per 5 euros:</label>
+      <input type="radio" id="lunch" name="lunch" value="yes">Sí
+      <input type="radio" id="lunch" name="lunch" value="no" checked>No<br><br>
+
+      <label for="taxi_option">¿Desea recogida en taxi?</label>
+      <input type="radio" id="taxi_yes" name="taxi_option" value="yes">Sí
+      <input type="radio" id="taxi_no" name="taxi_option" value="no" checked>No<br><br>
+      
+      <label for="num_taxis">Número de taxis:</label>
+      <input type="number" id="num_taxis" name="num_taxis" min="0">
+      <br><br>
+      <label for="guided_tour">¿Vol una visita guiada d'un dia per a un grup de fins a 10 persones?</label>
+      <input type="radio" id="guided_tour_yes" name="guided_tour_option" value="yes">Sí
+      <input type="radio" id="guided_tour_no" name="guided_tour_option" value="no" checked>No<br><br>
+      
+      
       <input type="submit" value="Reservar">
     </form>
   </body>
